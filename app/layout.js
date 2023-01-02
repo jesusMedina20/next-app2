@@ -1,14 +1,4 @@
-import Link from "next/link";
-const links = [
-  {
-    label: "home",
-    route: "/",
-  },
-  {
-    label: "about",
-    route: "/about",
-  },
-];
+import Navigation from "./components/Navigation";
 export default function RootLayout({ children }) {
   return (
     <html>
@@ -16,17 +6,7 @@ export default function RootLayout({ children }) {
         <title>my first app with next js 13</title>
       </head>
       <body>
-        <header>
-          <nav>
-            <ul>
-              {links.map(({ label, route }) => (
-                <li key={route}>
-                  <Link href={route}>{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </header>
+        <Navigation />
 
         {children}
       </body>
