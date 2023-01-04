@@ -3,12 +3,16 @@ import React from "react";
 import styles from "./Navigation.module.css";
 const links = [
   {
-    label: "home",
+    label: "Home ",
     route: "/",
   },
   {
-    label: "about",
+    label: "About ",
     route: "/about",
+  },
+  {
+    label: "Posts ",
+    route: "/posts",
   },
 ];
 
