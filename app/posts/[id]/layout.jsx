@@ -1,10 +1,11 @@
 import React from "react";
+import Counter from "./Counter";
 
 export default function PostLayout({ children }) {
   return (
     <div>
-      <h1> postlayout </h1>
-      {children}
+      <small> home &bull; post </small>
+      <div>{children}</div>
     </div>
   );
 }
