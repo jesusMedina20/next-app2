@@ -6,7 +6,7 @@ const fetchComments = (id) => {
   }).then((res) => res.json());
 };
 
-export default async function Post({ params }) {
+export default async function Post({ children, params }) {
   const { id } = params;
   const comments = await fetchComments(id);
 
@@ -14,7 +14,7 @@ export default async function Post({ params }) {
     <ul>
       {comments.map((comment) => (
         <li key={comment.id}>
-          <h2>{comment.name}</h2>
+          <h1>{comment.name}</h1>
           <p>{comment.body}</p>
         </li>
       ))}
