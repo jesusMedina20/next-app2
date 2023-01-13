@@ -1,5 +1,7 @@
 const fetchComments = async (id) => {
   await new Promise((resolve) => setTimeout(resolve, 3000));
+  //throw new Error(`error al cargar los comentarios`);
+
   return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, {
     next: {
       revalidate: 60,
